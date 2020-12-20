@@ -11,10 +11,13 @@ Swap the minimum for column n, where n is entered from the keyboard (SECOND TASK
 
 int main()
 {
-    int myArray[3][3] = {
+    int myArray[3][3] = 
+    {
+	    
     { 2, 1, 0}, // row 0
     {-1, -2, -3}, // row 1
     {10, 12, 13} // row 2
+	    
     };
     
     int i, j = 0, maxVal = 0, minVal = 0, userInput;
@@ -36,12 +39,15 @@ int main()
     
     //Displaying find max value in array
     printf("Diagonal elements:\n");
-    for(i=0; i<3; i++) {
-        if(maxVal < myArray[i][j]){
-                maxVal = myArray[i][j];
+    for(i=0; i<3; i++)
+    {
+        if(maxVal < myArray[i][j])
+	{
+		maxVal = myArray[i][j];
                 x=i;
                 y=j;
-            }
+        }
+	    
         printf("%d ", myArray[i][j]);
         printf("\n");
         j++;
@@ -49,8 +55,10 @@ int main()
     // user column maximum
     printf("Max array value: %d", maxVal);
     
-    for(i=0; i<3; i++) {
-        if(minVal > myArray[i][userInput]){
+    for(i=0; i<3; i++)
+    {
+        if(minVal > myArray[i][userInput])
+	{
             minVal = myArray[i][userInput];
             p=i;
             t=userInput;
@@ -69,10 +77,13 @@ int main()
     
     //Displaying array elements
     printf("Two Dimensional array elements:\n");
-    for(i=0; i<3; i++) {
-        for(j=0;j<3;j++) {
+    for(i=0; i<3; i++) 
+    {
+        for(j=0;j<3;j++) 
+	{
             printf("%d ", myArray[i][j]);
-            if(j==2){
+            if(j==2)
+	    {
                 printf("\n");
             }
         }
